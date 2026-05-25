@@ -1,0 +1,53 @@
+:host {
+  display: inline-block;
+}
+
+.badge {
+  --color: #f6c90e;
+  --glow:  rgb(246 201 14 / 0.3);
+  --stripe: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a1a2e;
+  border-radius: 0.4rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent calc(var(--stripe) - 4px),
+      rgba(0,0,0,0.09) calc(var(--stripe) - 4px),
+      rgba(0,0,0,0.09) var(--stripe)
+    ),
+    var(--color);
+  box-shadow: 0 0 0 0 var(--glow);
+  transition: box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.badge::before {
+  content: '⚠';
+  font-size: 0.95rem;
+}
+
+:host([pulsing]) .badge {
+  --color: #f05252;
+  --glow: rgb(240 82 82 / 0.4);
+  color: #fff;
+  animation: pulse-badge 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%   { box-shadow: 0 0 0 0      var(--glow); }
+  50%  { box-shadow: 0 0 16px 6px var(--glow); }
+  100% { box-shadow: 0 0 0 0      var(--glow); }
+}

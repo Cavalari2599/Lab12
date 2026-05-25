@@ -1,0 +1,53 @@
+:host {
+  display: block;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.8rem;
+  background: rgba(15,20,40,0.85);
+  border: 1px solid rgba(99,179,237,0.14);
+  border-radius: 1.4rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.dashboard::before {
+  content: 'user-dashboard';
+  position: absolute;
+  top: -0.62rem;
+  left: 1.4rem;
+  font-family: monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(99,179,237,0.55);
+  background: #0a0f24;
+  padding: 0 0.5rem;
+}
+
+.badge-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.event-log {
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #48bb78;
+  background: rgba(72,187,120,0.08);
+  border: 1px solid rgba(72,187,120,0.2);
+  border-radius: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  min-height: 1.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-log.visible { opacity: 1; }

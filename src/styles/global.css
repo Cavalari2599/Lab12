@@ -1,0 +1,30 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-deep:    #060b1a;
+  --bg-mid:     #0a0f24;
+  --accent-1:   #63b3ed;
+  --accent-2:   #9f7aea;
+  --accent-3:   #ed64a6;
+  --text:       #e2e8f0;
+  --text-muted: #718096;
+}
+
+html, body {
+  min-height: 100%;
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(99,179,237,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(159,122,234,0.06) 0%, transparent 60%),
+    var(--bg-deep);
+}
