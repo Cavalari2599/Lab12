@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard · Web Components</title>
+  <script type="module" crossorigin src="/Lab12/assets/index-BQwZk2kS.js"></script>
+  <link rel="stylesheet" crossorigin href="/Lab12/assets/index-dFL35b2S.css">
+</head>
+<body>
+
+  <main class="page">
+    <div class="title">
+      <h1>Web Components</h1>
+      <p>Shadow DOM · Eventos · Reactividad</p>
+    </div>
+
+    <user-dashboard>
+      <user-card
+        slot="card"
+        name="Daniel Cavalari"
+        role="Besto alumno"
+        avatar="https://images.cults3d.com/RM2H0ZXRYsAfo2DLFwmD2G-Lpns=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/14787776/illustration-file/2163cf02-1d2e-46b8-a473-1326f8906dae/Untitled1.png"
+      ></user-card>
+
+      <weather-time
+        slot="weather"
+        city="Liberia"
+      ></weather-time>
+    </user-dashboard>
+  </main>
+
+</body>
+</html>
